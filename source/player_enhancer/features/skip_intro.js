@@ -15,9 +15,9 @@ export const skipIntro = async () => {
 
 	const firstCuePoint = document.querySelector(cuePointSelector);
 	const cuePointOffset = Number.parseFloat(firstCuePoint.style?.left);
-	if (cuePointOffset > 5) {
-		return;
-	}
+
+	let skipBasedOnCuePoint = cuePointOffset < 5;
+	const fallbackIntroDuration = 32;
 
 	const addButton = () => {
 		if (getButtonElement()) {
@@ -39,7 +39,11 @@ export const skipIntro = async () => {
 
 		button.addEventListener("click", () => {
 			const video = getVideoElement();
-			video.currentTime = video.duration;
+			if (skipBasedOnCuePoint) {
+				video.currentTime = video.duration;
+			} else {
+				video.currentTime = fallbackIntroDuration;
+			}
 		});
 
 		getVideoElement()?.parentElement?.appendChild(button);
@@ -60,10 +64,21 @@ export const skipIntro = async () => {
 		}
 
 		const progress = Number.parseFloat(progressWidth);
-		if (progress < cuePointOffset) {
-			addButton();
+		if (skipBasedOnCuePoint) {
+			if (progress < cuePointOffset) {
+				addButton();
+			} else {
+				removeButton();
+			}
 		} else {
-			removeButton();
+			const video = getVideoElement();
+			const currentPosition = video.currentTime;
+
+			if (progress < 5 && currentPosition < fallbackIntroDuration) {
+				addButton();
+			} else {
+				removeButton();
+			}
 		}
 	});
 };
