@@ -11,7 +11,5 @@ import { skipIntro } from "./features/skip_intro";
 	skipIntro();
 	autoHideCursor();
 	alwaysPauseOnSpaceBar();
-
-	// TODO: Make this configurable
-	adjustSeekingTime(5);
+	adjustSeekingTime();
 })();

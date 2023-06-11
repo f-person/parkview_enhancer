@@ -6,8 +6,6 @@ export const alwaysPauseOnSpaceBar = () => {
 		const video = getVideoElement();
 		if (!video) return;
 
-		console.log(`tagName: ${event.target.tagName}`);
-
 		if (
 			event.key === " " &&
 			event.target.tagName !== "INPUT" &&

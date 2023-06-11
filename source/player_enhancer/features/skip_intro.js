@@ -1,4 +1,4 @@
-import { listenToStyleChanges, waitForElement } from "../../dom_utils";
+import { listenToStyleChanges, waitForElement } from "../../shared/dom_utils";
 import {
 	cuePointSelector,
 	getProgressElement,

@@ -14,11 +14,19 @@
 	"icons": {
 		"128": "icon.png"
 	},
-	"permissions": [],
+	"permissions": ["storage"],
 	"content_scripts": [
 		{
 			"matches": ["*://www.southparkstudios.com/episodes/*"],
 			"js": ["player_enhancer/player_enhancer.js"]
 		}
-	]
+	],
+	"options_ui": {
+		"browser_style": true,
+		"page": "options/options.html"
+	},
+	"background": {
+		"service_worker": "background.js",
+		"type": "module"
+	}
 }

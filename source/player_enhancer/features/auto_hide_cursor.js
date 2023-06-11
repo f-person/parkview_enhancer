@@ -1,4 +1,4 @@
-import { waitForElement } from "../../dom_utils";
+import { waitForElement } from "../../shared/dom_utils";
 import { getVideoElement, progressSelector } from "../selectors";
 
 export const autoHideCursor = async () => {
