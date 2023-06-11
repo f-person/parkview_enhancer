@@ -21,5 +21,13 @@ A browser extension that adds useful features for enjoying South Park on the off
 
 ---
 
-The extension isn't yet available on any stores, but the current features are functional
-and can be used by manually installing the extension.
+The extension isn't yet available on any stores but it's under review and will be
+available soon. In the meantime, you can install it manually.
+
+## Acknowledgements
+* [South Park](https://www.southparkstudios.com) for being so awesome and providing a free
+  way for everyone to enjoy the show
+* [fregante/browser-extension-template](https://github.com/fregante/browser-extension-template)
+  for the template used to create this extension
+* D952 for the [extension icon](https://commons.wikimedia.org/wiki/File:Stan_Marsh.svg),
+  licensed under CC0 1.0.
