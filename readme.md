@@ -6,6 +6,8 @@ A browser extension that adds useful features for enjoying South Park on the off
 * Automatically hides the cursor after a few seconds of inactivity on the video player
 * Always play/pause the video when the spacebar is pressed (instead of scrolling
   the page if the video is not focused)
+* Changes the seeking time when using the arrow keys to 5 seconds (will be configurable
+  in the future)
 
 #### Planned Features
 * Keep track of watched episodes

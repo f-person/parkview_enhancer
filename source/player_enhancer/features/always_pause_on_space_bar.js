@@ -4,9 +4,7 @@ import { getVideoElement } from "../selectors";
 export const alwaysPauseOnSpaceBar = () => {
 	document.addEventListener("keydown", (event) => {
 		const video = getVideoElement();
-		if (!video) {
-			return;
-		}
+		if (!video) return;
 
 		console.log(`tagName: ${event.target.tagName}`);
 

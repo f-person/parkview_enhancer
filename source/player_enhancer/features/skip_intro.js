@@ -20,9 +20,7 @@ export const skipIntro = async () => {
 	const fallbackIntroDuration = 32;
 
 	const addButton = () => {
-		if (getButtonElement()) {
-			return;
-		}
+		if (getButtonElement()) return;
 
 		let button = document.createElement("button");
 		button.id = buttonId;
