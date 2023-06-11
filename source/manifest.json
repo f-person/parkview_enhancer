@@ -3,8 +3,8 @@
 	"version": "0.1.0",
 	"description": "Adds useful features for enjoying South Park on the official website",
 	"homepage_url": "https://github.com/f-person/parkview_enhancer",
-	"manifest_version": 2,
-	"minimum_chrome_version": "74",
+	"manifest_version": 3,
+	"minimum_chrome_version": "88",
 	"applications": {
 		"gecko": {
 			"id": "parkview_enhancer@f-person.github.io",

@@ -15,7 +15,8 @@
 	],
 	"xo": {
 		"envs": [
-			"browser"
+			"browser",
+			"webextensions"
 		],
 		"rules": {
 			"no-unused-vars": [
@@ -31,19 +32,23 @@
 	},
 	"dependencies": {
 		"core-js": "^2.6.12",
-		"webext-options-sync": "^2.0.1",
-		"webextension-polyfill": "^0.8.0"
+		"webext-options-sync": "^3.1.0",
+		"webextension-polyfill": "^0.10.0"
 	},
 	"devDependencies": {
-		"@parcel/config-webextension": "^2.0.0-rc.0",
-		"@parcel/transformer-image": "^2.0.0-rc.0",
+		"@parcel/config-webextension": "^2.6.2",
+		"@parcel/transformer-image": "^2.6.2",
 		"npm-run-all": "^4.1.5",
-		"parcel": "^2.0.0-rc.0",
-		"stylelint": "^13.13.1",
-		"stylelint-config-xo": "^0.20.0",
-		"xo": "^0.44.0"
+		"parcel": "^2.6.2",
+		"stylelint": "^14.9.1",
+		"stylelint-config-xo": "^0.21.0",
+		"xo": "^0.50.0"
 	},
 	"webExt": {
 		"sourceDir": "distribution"
+	},
+	"@parcel/bundler-default-bug": "https://github.com/parcel-bundler/parcel/issues/8071",
+	"@parcel/bundler-default": {
+		"minBundles": 10000000
 	}
 }
