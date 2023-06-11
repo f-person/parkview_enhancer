@@ -30,3 +30,16 @@ available soon. In the meantime, you can install it manually.
   for the template used to create this extension
 * D952 for the [extension icon](https://commons.wikimedia.org/wiki/File:Stan_Marsh.svg),
   licensed under CC0 1.0.
+
+---
+
+When building for Firefox, change the following in `manifest.json`:
+```json
+{
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
+```
