@@ -58,7 +58,6 @@ export const skipIntro = async () => {
 
 	listenToStyleChanges(progressSelector, () => {
 		const progressWidth = getProgressElement().style?.width;
-		console.log(`new progressWidth: ${progressWidth}`);
 		if (!progressWidth) {
 			return;
 		}
