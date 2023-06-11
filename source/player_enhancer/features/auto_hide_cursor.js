@@ -1,10 +1,12 @@
 import { waitForElement } from "../../shared/dom_utils";
-import { getVideoElement, progressSelector } from "../selectors";
+import {
+	edgeGuiSelector,
+	getGuiElement,
+	getVideoElement,
+	progressSelector,
+} from "../selectors";
 
 export const autoHideCursor = async () => {
-	const edgeGuiSelector = ".edge-gui";
-	const getGuiElement = () => document.querySelector(edgeGuiSelector);
-
 	await waitForElement(edgeGuiSelector);
 	await waitForElement(progressSelector);
 

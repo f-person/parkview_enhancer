@@ -4,9 +4,11 @@ A browser extension that adds useful features for enjoying South Park on the off
 ## Features
 * Adds a "Skip Intro" button
 * Automatically hides the cursor after a few seconds of inactivity on the video player
+* Toggle play/pause on click on the video player
 * Always play/pause the video when the spacebar is pressed (instead of scrolling
   the page if the video is not focused)
 * Configurable seeking time (defaults to 5 seconds)
+* Toggle fullscreen on double-click
 
 #### Planned Features
 * Keep track of watched episodes

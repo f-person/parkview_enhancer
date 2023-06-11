@@ -1,7 +1,9 @@
 import { adjustSeekingTime } from "./features/adjust_seeking_time";
 import { alwaysPauseOnSpaceBar } from "./features/always_pause_on_space_bar";
 import { autoHideCursor } from "./features/auto_hide_cursor";
+import { fullscreenOnDoubleClick } from "./features/fullscreen_on_double_click";
 import { skipIntro } from "./features/skip_intro";
+import { togglePauseOnClick } from "./features/toggle_pause_on_click";
 
 (() => {
 	"use strict";
@@ -12,4 +14,6 @@ import { skipIntro } from "./features/skip_intro";
 	autoHideCursor();
 	alwaysPauseOnSpaceBar();
 	adjustSeekingTime();
+	fullscreenOnDoubleClick();
+	togglePauseOnClick();
 })();
