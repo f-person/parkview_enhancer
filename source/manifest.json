@@ -20,12 +20,5 @@
 			"matches": ["*://www.southparkstudios.com/episodes/*"],
 			"js": ["player_enhancer.js"]
 		}
-	],
-	"action": {
-		"default_title": "Login to Genius"
-	},
-	"background": {
-		"persistent": false,
-		"scripts": ["background.js", "auth.html"]
-	}
+	]
 }
