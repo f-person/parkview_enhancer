@@ -1,9 +1,8 @@
 {
 	"name": "South Park Enhancer",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "Adds useful features for enjoying South Park on the official website",
 	"homepage_url": "https://github.com/f-person/parkview_enhancer",
-	"manifest_version": 3,
 	"minimum_chrome_version": "88",
 	"applications": {
 		"gecko": {
@@ -25,6 +24,7 @@
 		"browser_style": true,
 		"page": "options/options.html"
 	},
+	"manifest_version": 3,
 	"background": {
 		"service_worker": "background.js",
 		"type": "module"
