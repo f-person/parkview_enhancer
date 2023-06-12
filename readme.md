@@ -5,7 +5,6 @@ A browser extension that adds useful features for enjoying South Park on the off
 
 [link-chrome]: https://chrome.google.com/webstore/detail/south-park-enhancer/maaedhmkhgeojhcgohfgejelmbkfcppa 'Version published on Chrome Web Store'
 [link-firefox]: https://addons.mozilla.org/firefox/addon/south-park-enhancer/ 'Version published on Mozilla Add-ons'
-[link-safari]: https://apps.apple.com/app/id1519867270 'Version published on the Mac App Store'
 
 [<img src="https://raw.githubusercontent.com/alrra/browser-logos/90fdf03c/src/chrome/chrome.svg" width="48" alt="Chrome" valign="middle">][link-chrome] [<img valign="middle" src="https://img.shields.io/chrome-web-store/v/maaedhmkhgeojhcgohfgejelmbkfcppa.svg?label=%20">][link-chrome] and other Chromium browsers
 
@@ -21,6 +20,7 @@ A browser extension that adds useful features for enjoying South Park on the off
 * Configurable seeking time (defaults to 5 seconds)
 * Toggle fullscreen on double-click
 * Makes episodes' list under "Watching" scrollable
+* Focuses the currently selected season when opening the season selection dropdown
 
 #### Planned Features
 * Keep track of watched episodes

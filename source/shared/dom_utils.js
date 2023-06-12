@@ -23,6 +23,35 @@ export const waitForElement = (selector) => {
 };
 
 /**
+ * Wait for an element to have an `attribute` with `value`.
+ *
+ * @param {String} selector
+ * @param {String} attribute
+ * @param {Any} value
+ * @returns
+ */
+export const waitForAttributeValue = async (selector, attribute, value) => {
+	await waitForElement(selector);
+
+	return new Promise((resolve) => {
+		if (document.querySelector(selector)?.getAttribute(attribute) === value) {
+			resolve();
+		}
+
+		const observer = new MutationObserver((mutations) => {
+			if (document.querySelector(selector)?.getAttribute(attribute) === value) {
+				resolve();
+				observer.disconnect();
+			}
+		});
+
+		observer.observe(document.querySelector(selector), {
+			attributeFilter: [attribute],
+		});
+	});
+};
+
+/**
  * @param {String} selector
  * @param {Function} callback
  * @returns {Function} disconnect

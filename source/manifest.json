@@ -1,6 +1,6 @@
 {
 	"name": "South Park Enhancer",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"description": "Adds useful features for enjoying South Park on the official website",
 	"homepage_url": "https://github.com/f-person/parkview_enhancer",
 	"minimum_chrome_version": "88",
@@ -18,6 +18,10 @@
 		{
 			"matches": ["*://www.southparkstudios.com/episodes/*"],
 			"js": ["player_enhancer/player_enhancer.js"]
+		},
+		{
+			"matches": ["*://www.southparkstudios.com/seasons/*"],
+			"js": ["seasons_enhancer/seasons_enhancer.js"]
 		}
 	],
 	"options_ui": {
