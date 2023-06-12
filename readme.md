@@ -9,6 +9,7 @@ A browser extension that adds useful features for enjoying South Park on the off
   the page if the video is not focused)
 * Configurable seeking time (defaults to 5 seconds)
 * Toggle fullscreen on double-click
+* Makes episodes' list under "Watching" scrollable
 
 #### Planned Features
 * Keep track of watched episodes
