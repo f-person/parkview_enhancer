@@ -16,15 +16,24 @@
 	"permissions": ["storage"],
 	"content_scripts": [
 		{
-			"matches": ["*://www.southparkstudios.com/episodes/*"],
+			"matches": [
+				"*://www.southparkstudios.com/episodes/*",
+				"*://www.southparkstudios.nu/episodes/*"
+			],
 			"js": ["player_enhancer/player_enhancer.js"]
 		},
 		{
-			"matches": ["*://www.southparkstudios.com/seasons/*"],
+			"matches": [
+				"*://www.southparkstudios.com/seasons/*",
+				"*://www.southparkstudios.nu/seasons/*"
+			],
 			"js": ["seasons_enhancer/seasons_enhancer.js"]
 		},
 		{
-			"matches": ["*://www.southparkstudios.com/"],
+			"matches": [
+				"*://www.southparkstudios.com/",
+				"*://www.southparkstudios.nu/"
+			],
 			"js": ["homepage_enhancer/homepage_enhancer.js"]
 		}
 	],
