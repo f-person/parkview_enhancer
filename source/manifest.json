@@ -22,6 +22,10 @@
 		{
 			"matches": ["*://www.southparkstudios.com/seasons/*"],
 			"js": ["seasons_enhancer/seasons_enhancer.js"]
+		},
+		{
+			"matches": ["*://www.southparkstudios.com/"],
+			"js": ["homepage_enhancer/homepage_enhancer.js"]
 		}
 	],
 	"options_ui": {

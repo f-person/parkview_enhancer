@@ -21,6 +21,7 @@ A browser extension that adds useful features for enjoying South Park on the off
 * Toggle fullscreen on double-click
 * Makes episodes' list under "Watching" scrollable
 * Focuses the currently selected season when opening the season selection dropdown
+* Makes the "FULL EPISODES" header on the homepage link to the full episodes page.
 
 #### Planned Features
 * Keep track of watched episodes
