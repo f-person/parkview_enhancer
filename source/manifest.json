@@ -18,21 +18,24 @@
 		{
 			"matches": [
 				"*://www.southparkstudios.com/episodes/*",
-				"*://www.southparkstudios.nu/episodes/*"
+				"*://www.southparkstudios.nu/episodes/*",
+				"*://www.southparkstudios.de/episodes/*"
 			],
 			"js": ["player_enhancer/player_enhancer.js"]
 		},
 		{
 			"matches": [
 				"*://www.southparkstudios.com/seasons/*",
-				"*://www.southparkstudios.nu/seasons/*"
+				"*://www.southparkstudios.nu/seasons/*",
+				"*://www.southparkstudios.de/seasons/*"
 			],
 			"js": ["seasons_enhancer/seasons_enhancer.js"]
 		},
 		{
 			"matches": [
 				"*://www.southparkstudios.com/",
-				"*://www.southparkstudios.nu/"
+				"*://www.southparkstudios.nu/",
+				"*://www.southparkstudios.de/"
 			],
 			"js": ["homepage_enhancer/homepage_enhancer.js"]
 		}
