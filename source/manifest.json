@@ -19,7 +19,10 @@
 			"matches": [
 				"*://www.southparkstudios.com/episodes/*",
 				"*://www.southparkstudios.nu/episodes/*",
-				"*://www.southparkstudios.de/episodes/*"
+				"*://www.southparkstudios.de/episodes/*",
+				"*://www.southpark.cc.com/episodes/*",
+				"*://www.southpark.lat/episodes/*",
+				"*://www.southparkstudios.co.uk/episodes/*"
 			],
 			"js": ["player_enhancer/player_enhancer.js"]
 		},
@@ -27,7 +30,10 @@
 			"matches": [
 				"*://www.southparkstudios.com/seasons/*",
 				"*://www.southparkstudios.nu/seasons/*",
-				"*://www.southparkstudios.de/seasons/*"
+				"*://www.southparkstudios.de/seasons/*",
+				"*://www.southpark.cc.com/seasons/*",
+				"*://www.southpark.lat/seasons/*",
+				"*://www.southparkstudios.co.uk/seasons/*"
 			],
 			"js": ["seasons_enhancer/seasons_enhancer.js"]
 		},
@@ -35,7 +41,10 @@
 			"matches": [
 				"*://www.southparkstudios.com/",
 				"*://www.southparkstudios.nu/",
-				"*://www.southparkstudios.de/"
+				"*://www.southparkstudios.de/",
+				"*://www.southpark.cc.com/",
+				"*://www.southpark.lat/",
+				"*://www.southparkstudios.co.uk/"
 			],
 			"js": ["homepage_enhancer/homepage_enhancer.js"]
 		}
