@@ -13,6 +13,7 @@ A browser extension that adds useful features for enjoying South Park on the off
 
 ## Features
 * Adds a "Skip Intro" button
+* Makes random episode selection actually random
 * Automatically hides the cursor after a few seconds of inactivity on the video player
 * Toggle play/pause on click on the video player
 * Always play/pause the video when the spacebar is pressed (instead of scrolling
@@ -26,8 +27,6 @@ A browser extension that adds useful features for enjoying South Park on the off
 #### Planned Features
 * Keep track of watched episodes
 * Manually mark an episode as watched or unwatched
-* "True Random" (currently, the "Random" button randomly selects an episode from 
-  a pre-defined list of episodes that gets occasionally updated)
 * If possible, force the HLS player to use the highest quality video stream
 * Make the "FULL EPISODES" text on the homepage clickable
 * Add a better season selection view to the left side of "full episodes"/season pages
