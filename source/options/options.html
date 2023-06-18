@@ -1,32 +1,201 @@
 <!DOCTYPE html>
-<meta charset="utf-8" />
-<title>Options</title>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Options</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				min-width: 300px;
+				min-height: 200px;
+				padding: 20px;
+				color: #333;
+			}
 
-<form id="options-form" class="detail-view-container">
-	<div class="form-container">
-		<h2>Options</h2>
-		<form>
-			<div>
-				<label for="seekTime">Seeking Time (Seconds)</label>
-				<input
-					type="number"
-					step="0.01"
-					id="seekTime"
-					name="seekTime"
-					min="0.01"
-					max="300"
-					class="input-field"
-				/>
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #333;
+					color: #f5f5f5;
+				}
+			}
+
+			.form-container {
+				max-width: 400px;
+				margin: 0 auto;
+				border: 1px solid #ccc;
+				border-radius: 6px;
+				padding: 20px;
+				background-color: #fff;
+				color: #333;
+			}
+
+			.dark-mode .form-container {
+				background-color: #444;
+				border-color: #999;
+				color: #f5f5f5;
+			}
+
+			h2 {
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			form {
+				margin-bottom: 20px;
+			}
+
+			label {
+				display: block;
+				margin-bottom: 10px;
+			}
+
+			.input-field {
+				width: 100%;
+				padding: 8px;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				font-size: 14px;
+				background-color: #fff;
+				color: #333;
+			}
+
+			.dark-mode .input-field {
+				background-color: #444;
+				color: #f5f5f5;
+			}
+
+			.footer {
+				text-align: center;
+				margin-top: 20px;
+			}
+
+			.footer a {
+				margin: 0 5px;
+				color: #666;
+				text-decoration: none;
+			}
+
+			.dark-mode .footer a {
+				color: #ccc;
+			}
+
+			.tooltip {
+				position: relative;
+				display: inline-block;
+				cursor: help;
+			}
+
+			.tooltip .tooltip-text {
+				visibility: hidden;
+				width: 200px;
+				background-color: #333;
+				color: #fff;
+				border-radius: 6px;
+				padding: 10px;
+				position: absolute;
+				z-index: 1;
+				bottom: 125%;
+				left: 50%;
+				margin-left: -100px;
+				opacity: 0;
+				transition: opacity 0.3s;
+			}
+
+			.tooltip:hover .tooltip-text {
+				visibility: visible;
+				opacity: 1;
+			}
+
+			.row {
+				display: flex;
+				align-items: center;
+				margin-bottom: 10px;
+			}
+
+			.checkbox-container {
+				display: flex;
+				align-items: center;
+			}
+
+			.label {
+				margin-right: 10px;
+			}
+
+			.button {
+				display: inline-block;
+				padding: 8px 16px;
+				border: none;
+				border-radius: 4px;
+				background-color: #4caf50;
+				color: #fff;
+				font-size: 14px;
+				cursor: pointer;
+				transition: background-color 0.3s;
+			}
+
+			.button:hover {
+				background-color: #45a049;
+			}
+
+			.dark-mode .button {
+				background-color: #666;
+			}
+
+			.dark-mode .button:hover {
+				background-color: #888;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="form-container">
+			<h2>Options</h2>
+			<form id="options-form">
+				<div>
+					<label for="seekTime">Seeking Time (Seconds)</label>
+					<input
+						type="number"
+						step="0.01"
+						id="seekTime"
+						name="seekTime"
+						min="0.01"
+						max="300"
+						class="input-field"
+					/>
+				</div>
+				<div class="row">
+					<span class="label">Truly Random Episode</span>
+					<div class="checkbox-container">
+						<input
+							type="checkbox"
+							id="overrideRandom"
+							name="overrideRandom"
+							class="input-field"
+						/>
+						<span class="tooltip">
+							<i>?</i>
+							<span class="tooltip-text">
+								By default, the South Park website has a pre-defined list of
+								random episodes.
+								<br />
+								<br />
+								Enabling this option will override that behavior and pick an
+								episode that is truly random from the entire list of episodes.
+							</span>
+						</span>
+					</div>
+				</div>
+			</form>
+			<div class="footer">
+				<a href="https://github.com/f-person/parkview_enhancer" target="_blank"
+					>Source Code</a
+				>
+				|
+				<a href="https://www.buymeacoffee.com/fperson" target="_blank"
+					>Donate</a
+				>
 			</div>
-		</form>
-		<div class="footer">
-			<a href="https://github.com/f-person/parkview_enhancer" target="_blank"
-				>Source Code</a
-			>
-			|
-			<a href="https://www.buymeacoffee.com/fperson" target="_blank">Donate</a>
 		</div>
-	</div>
-</form>
 
-<script src="options.js" type="module"></script>
+		<script src="options.js" type="module"></script>
+	</body>
+</html>

@@ -47,11 +47,25 @@
 				"*://www.southparkstudios.co.uk/"
 			],
 			"js": ["homepage_enhancer/homepage_enhancer.js"]
+		},
+		{
+			"matches": [
+				"*://www.southparkstudios.com/*",
+				"*://www.southparkstudios.nu/*",
+				"*://www.southparkstudios.de/*",
+				"*://www.southpark.cc.com/*",
+				"*://www.southpark.lat/*",
+				"*://www.southparkstudios.co.uk/*"
+			],
+			"js": ["general_enhancer/general_enhancer.js"]
 		}
 	],
 	"options_ui": {
 		"browser_style": true,
 		"page": "options/options.html"
+	},
+	"action": {
+		"default_popup": "options/options.html"
 	},
 	"manifest_version": 3,
 	"background": {
