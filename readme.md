@@ -12,17 +12,17 @@ A browser extension that adds useful features for enjoying South Park on the off
 
 
 ## Features
-* Adds a "Skip Intro" button
-* Makes random episode selection actually random
-* Automatically hides the cursor after a few seconds of inactivity on the video player
-* Toggle play/pause on click on the video player
-* Always play/pause the video when the spacebar is pressed (instead of scrolling
-  the page if the video is not focused)
-* Configurable seeking time (defaults to 5 seconds)
-* Toggle fullscreen on double-click
-* Makes episodes' list under "Watching" scrollable
-* Focuses the currently selected season when opening the season selection dropdown
-* Makes the "FULL EPISODES" header on the homepage link to the full episodes page.
+1. **Scrollable Episode Navigation:** Fetches and displays next and previous episodes below the video player as you scroll, providing seamless access to adjacent episodes.
+2. **Skip Intro Button:** Adds a convenient "Skip Intro" button for skipping the introductory portion of episodes, saving time and enhancing the viewing experience.
+3. **Enhanced Random Episode Selection:** Improves the randomness of episode selection, ensuring a truly unpredictable and diverse viewing experience.
+4. **Auto Cursor Hide:** Automatically hides the cursor after a few seconds of inactivity on the video player, reducing distractions and maximizing the focus on the content.
+5. **Click-to-Play/Pause:** Allows effortless play/pause control by clicking directly on the video player, enhancing usability and convenience.
+6. **Spacebar Play/Pause:** Ensures consistent play/pause functionality by capturing the spacebar key press, even when the video is not in focus, preventing accidental page scrolling.
+7. **Configurable Seeking Time:** Provides flexibility by allowing users to customize the seeking time, with a default setting of 5 seconds, for precise video navigation.
+8. **Double-Click Fullscreen:** Enables fullscreen mode with a simple double-click gesture, providing an intuitive and immersive viewing experience.
+9. **Improved Episode List Scrollability:** Enhances the usability of the episodes' list under the "Watching" section by making it scrollable, facilitating easier browsing of available episodes.
+10. **Focused Season Selection:** Automatically focuses on the currently selected season when opening the season selection dropdown, streamlining episode navigation within a specific season.
+11. **Homepage Link Enhancement:** Enhances user convenience by making the "FULL EPISODES" header on the homepage clickable, directly linking to the full episodes page for easy access to all available content.
 
 #### Planned Features
 * Keep track of watched episodes
@@ -47,10 +47,10 @@ A browser extension that adds useful features for enjoying South Park on the off
 When building for Firefox, change the following in `manifest.json`:
 ```json
 {
-  "manifest_version": 2,
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  }
+	"manifest_version": 2,
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	}
 }
 ```
