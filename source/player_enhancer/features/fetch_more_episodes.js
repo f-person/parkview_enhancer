@@ -1,6 +1,7 @@
 import { waitForElement } from "../../shared/dom_utils";
 
 const itemsSelector = ".items-wrap .item";
+const carouselSelector = ".carousel-viewport";
 
 /**
  * Fetches more episodes as you scroll the episode list under "Watching".
@@ -8,7 +9,9 @@ const itemsSelector = ".items-wrap .item";
 export const fetchEpisodesOnScroll = async () => {
 	await waitForElement(itemsSelector);
 
-	const carouselViewport = document.querySelector(".carousel-viewport");
+	overrideCarouselButtons();
+
+	const carouselViewport = document.querySelector(carouselSelector);
 	let isFetchingNext = false;
 	let isFetchingPrevious = false;
 
@@ -58,6 +61,35 @@ export const fetchEpisodesOnScroll = async () => {
 	});
 };
 
+const overrideCarouselButtons = () => {
+	const carousel = document.querySelector(carouselSelector);
+
+	const handleClick = (event, isLeft) => {
+		event.preventDefault();
+		event.stopPropagation();
+
+		const clientWidth = carousel.clientWidth;
+		const itemSize = carousel.querySelector(itemsSelector).offsetWidth;
+		let scrollOffset = clientWidth - itemSize;
+		if (isLeft) {
+			scrollOffset *= -1;
+		}
+
+		carousel.scrollTo({
+			left: carousel.scrollLeft + scrollOffset,
+			behavior: "smooth",
+		});
+	};
+
+	document
+		.querySelector(".carousel-left-nav")
+		.addEventListener("click", (event) => handleClick(event, true));
+
+	document
+		.querySelector(".carousel-right-nav")
+		.addEventListener("click", (event) => handleClick(event, false));
+};
+
 const fetchPreviousEpisodes = async () => {
 	const items = getItems();
 	const firstItemUrl = items[0].firstChild.href;
@@ -81,7 +113,7 @@ const fetchPreviousEpisodes = async () => {
 		(acc, item) => acc + item.offsetWidth,
 		0
 	);
-	document.querySelector(".carousel-viewport").scrollLeft += scrollOffset;
+	document.querySelector(carouselSelector).scrollLeft += scrollOffset;
 };
 
 const fetchNextEpisodes = async () => {
