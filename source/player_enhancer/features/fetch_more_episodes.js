@@ -5,12 +5,30 @@ const itemsSelector = ".items-wrap .item";
 /**
  * Fetches more episodes as you scroll the episode list under "Watching".
  */
-export const fetchMoreEpisodes = async () => {
+export const fetchEpisodesOnScroll = async () => {
 	await waitForElement(itemsSelector);
 
 	const carouselViewport = document.querySelector(".carousel-viewport");
 	let isFetchingNext = false;
 	let isFetchingPrevious = false;
+
+	const waitForScrollFinish = () => {
+		let scrollTimer;
+
+		return new Promise((resolve) => {
+			const scrollHandler = () => {
+				clearTimeout(scrollTimer);
+				scrollTimer = setTimeout(() => {
+					resolve();
+					carouselViewport.removeEventListener("scroll", scrollHandler);
+				}, 100);
+			};
+
+			carouselViewport.addEventListener("scroll", scrollHandler);
+		});
+	};
+
+	await waitForScrollFinish();
 
 	carouselViewport.addEventListener("scroll", async () => {
 		const scrollLeft = carouselViewport.scrollLeft;
@@ -52,7 +70,11 @@ const fetchPreviousEpisodes = async () => {
 	normalizeImages(newEpisodes);
 
 	const itemParent = document.querySelector(itemsSelector).parentElement;
-	itemParent.prepend(...newEpisodes);
+	if (itemParent.firstChild.classList?.contains("item")) {
+		itemParent.prepend(...newEpisodes);
+	} else {
+		itemParent.firstChild.after(...newEpisodes);
+	}
 
 	// Adjust the scroll position after prepending the new episodes
 	const scrollOffset = newEpisodes.reduce(

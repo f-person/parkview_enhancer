@@ -1,6 +1,6 @@
 {
 	"name": "South Park Enhancer",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "Adds useful features for enjoying South Park on the official website",
 	"homepage_url": "https://github.com/f-person/parkview_enhancer",
 	"minimum_chrome_version": "88",
