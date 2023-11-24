@@ -22,7 +22,8 @@
 				"*://www.southparkstudios.de/episodes/*",
 				"*://www.southpark.cc.com/episodes/*",
 				"*://www.southpark.lat/episodes/*",
-				"*://www.southparkstudios.co.uk/episodes/*"
+				"*://www.southparkstudios.co.uk/episodes/*",
+				"*://www.southpark.de/episodes/*"
 			],
 			"js": ["player_enhancer/player_enhancer.js"]
 		},
@@ -33,7 +34,8 @@
 				"*://www.southparkstudios.de/seasons/*",
 				"*://www.southpark.cc.com/seasons/*",
 				"*://www.southpark.lat/seasons/*",
-				"*://www.southparkstudios.co.uk/seasons/*"
+				"*://www.southparkstudios.co.uk/seasons/*",
+				"*://www.southpark.de/seasons/*"
 			],
 			"js": ["seasons_enhancer/seasons_enhancer.js"]
 		},
@@ -44,7 +46,8 @@
 				"*://www.southparkstudios.de/",
 				"*://www.southpark.cc.com/",
 				"*://www.southpark.lat/",
-				"*://www.southparkstudios.co.uk/"
+				"*://www.southparkstudios.co.uk/",
+				"*://www.southpark.de/"
 			],
 			"js": ["homepage_enhancer/homepage_enhancer.js"]
 		},
@@ -55,7 +58,8 @@
 				"*://www.southparkstudios.de/*",
 				"*://www.southpark.cc.com/*",
 				"*://www.southpark.lat/*",
-				"*://www.southparkstudios.co.uk/*"
+				"*://www.southparkstudios.co.uk/*",
+				"*://www.southpark.de/*"
 			],
 			"js": ["general_enhancer/general_enhancer.js"]
 		}
